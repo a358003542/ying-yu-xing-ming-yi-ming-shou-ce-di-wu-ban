@@ -67,7 +67,7 @@ if __name__ == "__main__":
             print(f'----下一个异常区段---')
             count += 1
 
-            if count > 50:
+            if count > 7:
                 print("Still have more abnormal data, but stop here to avoid too many outputs.")
                 break
 
