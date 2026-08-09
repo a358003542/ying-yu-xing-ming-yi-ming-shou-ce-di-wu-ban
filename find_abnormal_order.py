@@ -10,6 +10,7 @@ def remove_unwanted_symbol(s):
 
     """
     new_s = re.sub(r"['-]", '', s)
+    new_s = re.sub(r"è", 'e', new_s)
     return new_s
 
 
@@ -18,6 +19,7 @@ class WordEntry:
     """
     A'Court 这样的省音符号会干扰排序 将其移除
     Anne-Marie 连字符移除
+    临时增补规则 Bandière 其中è更改为e
     """
     content: str
     map: tuple
