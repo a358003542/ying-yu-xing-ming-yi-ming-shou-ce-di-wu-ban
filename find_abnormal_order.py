@@ -12,6 +12,9 @@ def remove_unwanted_symbol(s):
     new_s = re.sub(r"['-]", '', s)
     new_s = re.sub(r"è", 'e', new_s)
     new_s = re.sub(r"é", 'e', new_s)
+    new_s = re.sub(r"ñ", 'n', new_s)
+    new_s = re.sub(r"ü", 'u', new_s)
+    new_s = re.sub(r"ä", 'a', new_s)
     return new_s
 
 
@@ -22,6 +25,10 @@ class WordEntry:
     Anne-Marie 连字符移除
     临时增补规则 Bandière 其中è更改为e
     临时增补规则 Duprée 其中é更改为e
+    临时增补规则 Ibañez 其中ñ更改为n
+    临时增补规则 Ibargüen 其中ü更改为u
+    临时增补规则 Irenäus 其中ä更改为a
+
     """
     content: str
     map: tuple
